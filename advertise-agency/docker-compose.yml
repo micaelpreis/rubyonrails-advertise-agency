@@ -11,5 +11,3 @@ app:
     - "3000:3000"
   links:
     - postgres
-  depends_on:
-      - postgres
