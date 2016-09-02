@@ -35,7 +35,7 @@ First start by cloning this repository into your computer:
 
 	git clone https://github.com/micaelpreis/rubyonrails-advertise-agency.git
 
-After the cloning is complete, you need to set up the environment by running the following command in the folder "advertise-agency":
+After the cloning is complete, you need to set up the environment:
 
 	docker-compose build
 

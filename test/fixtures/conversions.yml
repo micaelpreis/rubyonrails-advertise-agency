@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  click_id: 
+  revenue: 9.99
+
+two:
+  click_id: 
+  revenue: 9.99
