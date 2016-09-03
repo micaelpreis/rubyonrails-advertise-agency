@@ -51,7 +51,18 @@ You can now check the application on your browser in [here](http://localhost:300
 
 #### How To Use The Application
 
-(TODO)
+In order to use the application you need to follow the steps below:
+
+1. Put the three required files in the folder "/app/assets/csv/"
+2. Start the application
+3. Go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Load Data'
+
+After these three steps you can see the campaigns available in [http://localhost:3000/campaigns/](http://localhost:3000/campaigns/) and see the banners for a specific campaign in [http://localhost:3000/campaigns/{campaign_id}](http://localhost:3000/campaigns/{campaign_id}).
+
+The application will render one of the top x banners for the campaign selected.
+
+**Note**
+If you want to delete all data in the application, go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Clean Data'.
 
 #### How To Run The Tests
 

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<h4>Import Data</h4>
+<p>To import data to the database, paste the three files (impressions.csv, clicks.csv, conversions.csv) in to the folder <b>"/app/assets/csv/"</b>.</p>
+
+<%= form_tag import_data_path, multipart: true do %>
+	<%= submit_tag "Import CSV Files" %>
+<% end %>
+
+<br>
+<h4>Clean Data</h4>
+<p>To clean all data present in the database, click on the button below.</p>
+
+<%= button_to 'Clean Data', clean_data_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<br>
+<h4><%= link_to 'Go To Campaigns', campaigns_path%></h4>

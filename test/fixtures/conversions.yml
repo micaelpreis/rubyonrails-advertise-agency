@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: conversions
+#
+#  id         :integer          not null, primary key
+#  click_id   :integer
+#  revenue    :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

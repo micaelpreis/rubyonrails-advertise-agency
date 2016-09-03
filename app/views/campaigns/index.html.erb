@@ -1,25 +1,27 @@
 <p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
 
 <h1>Listing Campaigns</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @campaigns.each do |campaign| %>
+<% if @campaigns.empty? %>
+  <p>There are no campaigns present in the application. You can import them <%= link_to "here", root_path %>.</p>
+<% else %>
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to 'Show', campaign %></td>
-        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
-        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Campaign ID</th>
+        <th colspan="1"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @campaigns.each do |campaign| %>
+        <tr>
+          <td><%= campaign.id %></td>
+          <td><%= link_to 'Show', campaign %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 
-<br>
-
-<%= link_to 'New Campaign', new_campaign_path %>
+<h4><%= link_to 'Go Back', root_path %></h4>
