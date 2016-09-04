@@ -1,16 +1,16 @@
 # rubyonrails-advertise-agency
-### Ruby on Rails - Advertise Agency
+## Ruby on Rails - Advertise Agency
 
-#### Objective
+### Objective
 
 Create a web application in Ruby on Rails to serve banners for an advertising agency.
 
-#### Requirements
+### Requirements
 
 * the application needs to be developed in Ruby
 * the application should be smart enough to render banners based on their revenue-performance
 * the data that allows to determine how well a campaign is doing, is obtained through 3 CSV files:
-	* impressions.csv
+	* impressions.cs
 	* clicks.csv
 	* conversons.csv
 * there are 4 possible scenarios when displaying the banners:
@@ -27,7 +27,7 @@ Create a web application in Ruby on Rails to serve banners for an advertising ag
 * the top banners being served should not follow an order based on its performance, but they should appear in a random sequence
 * the application should also avoid that a banner will be served twice, before the sequence has finished for a unique visitor
 
-#### How To Run The Application
+### How To Run The Application
 
 To run the aplication, you only need to run a few commands on your terminal.
 
@@ -49,11 +49,11 @@ At last, to start the application, just run this command:
 
 You can now check the application on your browser in [here](http://localhost:3000).
 
-#### How To Use The Application
+### How To Use The Application
 
 In order to use the application you need to follow the steps below:
 
-1. Put the three required files in the folder "/app/assets/csv/"
+1. If you want to change the files to be loaded, put them in the folder "/app/assets/csv/" and delete the other ones
 2. Start the application
 3. Go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Load Data'
 
@@ -64,7 +64,7 @@ The application will render one of the top x banners for the campaign selected.
 **Note**
 If you want to delete all data in the application, go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Clean Data'.
 
-#### How To Run The Tests
+### How To Run The Tests
 
 In order to run the tests created for this application, you need to run the following command:
 

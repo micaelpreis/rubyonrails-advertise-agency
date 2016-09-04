@@ -9,7 +9,8 @@
   <table>
     <thead>
       <tr>
-        <th>Campaign ID</th>
+        <th style="padding-right: 25px">ID</th>
+        <th style="padding-right: 25px">Number of Banners</th>
         <th colspan="1"></th>
       </tr>
     </thead>
@@ -17,6 +18,7 @@
       <% @campaigns.each do |campaign| %>
         <tr>
           <td><%= campaign.id %></td>
+          <td><%= campaign.banners.size %></td>
           <td><%= link_to 'Show', campaign %></td>
         </tr>
       <% end %>
