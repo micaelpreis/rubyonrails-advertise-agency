@@ -70,7 +70,7 @@ There were two sets of tests created. The first set consisted on manually test t
 
 #### Manual Testing
 
-The CSV files created by the author to test the application were filled with data so that we could test the following scenarios:
+The CSV files created by the author to test the application were filled with data so that we could test and validate the following scenarios:
 
 * **Campaign 1** - Show Top 10 Banners
 	* 12 total banners, from ID '1' to '12', all with revenue
@@ -99,8 +99,15 @@ The CSV files created by the author to test the application were filled with dat
 
 #### Rspec
 
-In order to run the tests created for this application, you need to run the following command:
+In addiction to the previous set of manual tests, it was also implemented some automated tests, with the help of the Ruby tool, Rspec. These tests, allowed the author to test the application in a variety of different aspects, such as:
 
-	rspec
+* campaigns controller - test the index and show methods
+* general controller - test the import and clean data
+* campaigns views - test the 5 scenarios present above in the "manual testing" section
+* routes - test all routes of the application
+
+To run these tests, you need to run the following command:
+
+	docker-compose run app rspec
 
 

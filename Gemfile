@@ -50,6 +50,11 @@ group :development, :test do
   gem "better_errors"
   gem 'did_you_mean', '~> 1.0.0'
 
+  # Testing
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'capybara'
+
   # Rails console: ap User.first
   gem "awesome_print", require:"ap"
 end
