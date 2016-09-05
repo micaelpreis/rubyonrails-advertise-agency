@@ -53,21 +53,54 @@ You can now check the application on your browser in [here](http://localhost:300
 
 In order to use the application you need to follow the steps below:
 
-1. If you want to change the files to be loaded, put them in the folder "/app/assets/csv/" and delete the other ones
-2. Start the application
-3. Go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Load Data'
-
-After these three steps you can see the campaigns available in [http://localhost:3000/campaigns/](http://localhost:3000/campaigns/) and see the banners for a specific campaign in [http://localhost:3000/campaigns/{campaign_id}](http://localhost:3000/campaigns/{campaign_id}).
+1. Start the application
+2. Go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Load Data'
+3. Go to [http://localhost:3000/campaigns/](http://localhost:3000/campaigns/) or click on 'Go To Campaigns'
+4. Go to  [http://localhost:3000/campaigns/{campaign_id}](http://localhost:3000/campaigns/{campaign_id}) or select one of the campaigns by clicking on 'Show'
 
 The application will render one of the top x banners for the campaign selected.
 
-**Note**
-If you want to delete all data in the application, go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Clean Data'.
+**Note 1:** If you want to delete all data in the application, go to [http://localhost:3000/](http://localhost:3000/}) and click on 'Clean Data'.
 
-### How To Run The Tests
+**Note 2:** If you want to change the CSV files to be loaded, put them in the folder "/app/assets/csv/" and delete the other ones present in that folder.
+
+### Tests
+
+There were two sets of tests created. The first set consisted on manually test the application, by creating CSV files with the data necessary to test all four scenarios when rendering a banner as well as test the import and clean data actions. The second, consisted on creating Rspec tests, that automatically test the application.
+
+#### Manual Testing
+
+The CSV files created by the author to test the application were filled with data so that we could test the following scenarios:
+
+* **Campaign 1** - Show Top 10 Banners
+	* 12 total banners, from ID '1' to '12', all with revenue
+	* banners with ID '11' and '12' with less revenue than the others
+	* **Expected Outcome**: show banners from ID '1' to 10' randomly
+
+* **Campaign 2** - Show Top 8 Banners
+	* 8 total banners, from ID '13' to '20', all with revenue
+	* **Expected Outcome**: show banners from ID '13' to '20' randomly
+
+* **Campaign 3** - Show Top 5 Banners
+	* 5 total banners, from ID '21' to '25', all with revenue
+	* **Expected Outcome**: show banners from ID '21' to '25' randomly
+
+* **Campaign 4** - Show Top 3 Banners + 2 Banners With The Most Clicks
+	* 6 total banners, from ID '26' to '31'
+	* banners '26', '27' and '28' with revenue
+	* banners '29', '30', '31' with no revenue, only clicks
+	* banner '31' with less clicks than the others
+	* **Expected Outcome**: show banners from ID '26' to '30' randomly
+
+* **Campaign 5** - Show 3 Banners With The most Clicks + 2 Random Banners
+	* 7 total banners, from ID '32' to '38'
+	* banners '32', '33' and '34' with clicks
+	* **Expected Outcome**: show banners '32', '33' and '34', plus two more banners from ID '35' to '38' randomly
+
+#### Rspec
 
 In order to run the tests created for this application, you need to run the following command:
 
-	(run tests command)
+	rspec
 
 

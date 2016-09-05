@@ -25,6 +25,7 @@ class GeneralController < ApplicationController
         Click.destroy_all
         Banner.destroy_all
         Campaign.destroy_all
+        session.clear
         redirect_to root_url, notice: 'Data cleaned!'
       end
     rescue ActiveRecord::ActiveRecordError => e

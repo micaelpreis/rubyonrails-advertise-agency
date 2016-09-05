@@ -12,12 +12,8 @@ class Banner < ActiveRecord::Base
   has_many :clicks
   has_many :conversions, through: :clicks
 
-  # Get banners with clicks
   scope :with_clicks, -> {joins(:clicks).where.not(clicks: {id: nil})}
-
-  # Get banners with conversions
   scope :with_conversions, -> {joins(:conversions).where.not(conversions: {id: nil})}
-
-  # Get top banners
-  scope :top_banners, -> {joins(:conversions).group("banners.id").order("SUM(revenue) DESC").limit(10)}
+  scope :top_banners, -> {joins(:conversions).group("banners.id").order("SUM(revenue) DESC")}
+  scope :most_clicks, ->{joins(:clicks).group("banners.id").order("COUNT(banners.id) DESC")}
 end
